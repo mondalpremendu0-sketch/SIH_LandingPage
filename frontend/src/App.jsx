@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { LandingPage } from "./features/LandingPage/pages/LandingPage";
+import { Dashboard } from "./features/Dashboard/Dashboard";
 
 function getInitialTheme() {
   const savedTheme = window.localStorage.getItem("nexus-theme");
@@ -18,5 +19,9 @@ export default function App() {
     window.localStorage.setItem("nexus-theme", theme);
   }, [theme]);
 
-  return <LandingPage theme={theme} onThemeChange={setTheme} />;
+  return window.location.pathname.startsWith("/dashboard") ? (
+    <Dashboard theme={theme} onThemeChange={setTheme} />
+  ) : (
+    <LandingPage theme={theme} onThemeChange={setTheme} />
+  );
 }

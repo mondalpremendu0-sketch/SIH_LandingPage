@@ -15,7 +15,7 @@ export function HeroActions() {
         ease: [0.22, 1, 0.36, 1],
       }}
     >
-      <a className="hero-primary-action" href="#intelligence">
+      <a className="hero-primary-action" href="/dashboard">
         EXPLORE NEXUS <ArrowUpRight aria-hidden="true" size={16} />
       </a>
       <a className="hero-secondary-action" href="#network">
