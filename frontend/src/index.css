@@ -1277,3 +1277,264 @@ button:focus-visible {
     opacity: 0.72;
   }
 }
+
+.nexus-footer {
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid var(--color-border);
+  background: color-mix(
+    in srgb,
+    var(--color-elevated) 42%,
+    var(--color-background)
+  );
+}
+
+.nexus-footer-cta {
+  position: relative;
+  min-height: min(760px, 78svh);
+  display: grid;
+  place-items: center;
+  padding: clamp(108px, 15vw, 220px) var(--spacing-page)
+    clamp(112px, 15vw, 220px);
+  isolation: isolate;
+}
+
+.nexus-footer-cta-content {
+  position: relative;
+  z-index: 1;
+  max-width: 940px;
+  text-align: center;
+}
+
+.nexus-footer-kicker,
+.nexus-footer-column-label,
+.nexus-footer-bottom {
+  color: var(--color-text-muted);
+  font-family: "Geist Mono", "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.nexus-footer-kicker {
+  margin: 0 0 clamp(24px, 4vw, 42px);
+}
+
+.nexus-footer-cta h2 {
+  margin: 0;
+  color: var(--color-text);
+  font-size: clamp(3.5rem, 7vw, 8rem);
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 0.91;
+}
+
+.nexus-footer-description {
+  max-width: 480px;
+  margin: clamp(28px, 4vw, 42px) auto 0;
+  color: var(--color-text-secondary);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.55;
+}
+
+.nexus-footer-cta-link {
+  --footer-cta-x: 0px;
+  --footer-cta-y: 0px;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: clamp(30px, 4vw, 44px);
+  padding: 14px 18px;
+  border: 1px solid var(--color-text);
+  color: var(--color-text);
+  font-family: "Geist Mono", "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  transform: translate(var(--footer-cta-x), var(--footer-cta-y));
+  transition:
+    background-color var(--motion-standard),
+    border-color var(--motion-standard),
+    color var(--motion-standard),
+    transform 180ms ease;
+}
+
+.nexus-footer-cta-link svg {
+  transition: transform var(--motion-standard);
+}
+
+.nexus-footer-cta-link:hover {
+  border-color: var(--color-accent);
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+}
+
+.nexus-footer-cta-link:hover svg {
+  transform: translate(3px, -3px);
+}
+
+.nexus-footer-signal {
+  position: absolute;
+  z-index: 0;
+  inset: 8% 0 auto;
+  width: 100%;
+  height: 84%;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.nexus-footer-signal path {
+  fill: none;
+  stroke: var(--color-accent);
+  stroke-width: 1;
+  opacity: 0.17;
+  stroke-dasharray: 5 14;
+  animation: nexus-signal-drift 18s linear infinite;
+}
+
+.nexus-footer-signal path:nth-child(2) {
+  animation-duration: 24s;
+  animation-direction: reverse;
+}
+
+.nexus-footer-signal path:nth-child(3) {
+  opacity: 0.1;
+  animation-duration: 28s;
+}
+
+.nexus-footer-signal circle {
+  fill: var(--color-accent);
+  opacity: 0.45;
+  animation: nexus-signal-pulse 4s ease-in-out infinite;
+}
+
+.nexus-footer-signal circle:nth-child(2n) {
+  animation-delay: -1.5s;
+}
+
+@keyframes nexus-signal-drift {
+  to {
+    stroke-dashoffset: -180;
+  }
+}
+
+@keyframes nexus-signal-pulse {
+  0%,
+  100% {
+    opacity: 0.22;
+  }
+  50% {
+    opacity: 0.68;
+  }
+}
+
+.nexus-footer-navigation {
+  display: grid;
+  grid-template-columns: 1.7fr repeat(3, 1fr);
+  gap: 32px;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 72px var(--spacing-page) 88px;
+  border-top: 1px solid var(--color-border);
+}
+
+.nexus-footer-column-label {
+  margin: 0 0 22px;
+  color: var(--color-text);
+}
+
+.nexus-footer-brand p:last-child {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.nexus-footer-links {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+}
+
+.nexus-footer-links a,
+.nexus-footer-link-placeholder {
+  transition: color var(--motion-standard);
+}
+
+.nexus-footer-links a:hover {
+  color: var(--color-accent);
+}
+
+.nexus-footer-link-placeholder {
+  color: var(--color-text-secondary);
+}
+
+.nexus-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 18px var(--spacing-page) 24px;
+  border-top: 1px solid var(--color-border);
+}
+
+.nexus-footer-bottom i {
+  padding-inline: 8px;
+  color: var(--color-accent);
+  font-style: normal;
+}
+
+@media (max-width: 1023px) {
+  .nexus-footer-navigation {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 52px;
+  }
+}
+
+@media (max-width: 767px) {
+  .nexus-footer-cta {
+    min-height: auto;
+    padding-top: 112px;
+    padding-bottom: 112px;
+  }
+
+  .nexus-footer-cta h2 {
+    font-size: clamp(2.8rem, 12vw, 4.5rem);
+  }
+
+  .nexus-footer-signal {
+    inset: 16% -35% auto;
+    width: 170%;
+    height: 68%;
+  }
+
+  .nexus-footer-navigation {
+    grid-template-columns: 1fr;
+    gap: 46px;
+    padding-top: 64px;
+    padding-bottom: 68px;
+  }
+
+  .nexus-footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    line-height: 1.5;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nexus-footer-signal path,
+  .nexus-footer-signal circle {
+    animation: none;
+  }
+
+  .nexus-footer-cta-link {
+    transform: none;
+    transition-duration: 0.01ms;
+  }
+}

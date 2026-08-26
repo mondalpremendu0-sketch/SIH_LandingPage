@@ -1,6 +1,7 @@
 import { Navbar } from "../Components/Navbar";
 import { HeroSection } from "../Components/HeroSection";
 import { IntelligenceOverview } from "../Components/Intelligence/IntelligenceOverview";
+import { NexusFooter } from "../Components/NexusFooter";
 
 export function LandingPage({ theme, onThemeChange }) {
   return (
@@ -10,6 +11,7 @@ export function LandingPage({ theme, onThemeChange }) {
         <HeroSection />
         <IntelligenceOverview />
       </main>
+      <NexusFooter />
     </div>
   );
 }
