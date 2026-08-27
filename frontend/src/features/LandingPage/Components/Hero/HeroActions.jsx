@@ -17,7 +17,7 @@ export function HeroActions() {
       }}
     >
       <MagneticButton as="div" strength={0.2}>
-        <a className="hero-primary-action" href="#intelligence">
+        <a className="hero-primary-action" href="/dashboard">
           <span>EXPLORE NEXUS</span>
           <ArrowUpRight aria-hidden="true" size={16} />
         </a>

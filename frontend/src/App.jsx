@@ -1,16 +1,8 @@
-import { useEffect, useState } from "react";
-import { LandingPage } from "./features/LandingPage/pages/LandingPage";
+import React, { useEffect, useState } from "react";
+import { RouterProvider } from "react-router";
+import { createAppRouter, getInitialTheme } from './app.routes';
 
-function getInitialTheme() {
-  const savedTheme = window.localStorage.getItem("nexus-theme");
-  return savedTheme === "light" ||
-    savedTheme === "dark" ||
-    savedTheme === "system"
-    ? savedTheme
-    : "system";
-}
-
-export default function App() {
+function App() {
   const [theme, setTheme] = useState(getInitialTheme);
 
   useEffect(() => {
@@ -18,5 +10,9 @@ export default function App() {
     window.localStorage.setItem("nexus-theme", theme);
   }, [theme]);
 
-  return <LandingPage theme={theme} onThemeChange={setTheme} />;
+  const router = createAppRouter(theme, setTheme);
+
+  return <RouterProvider router={router} />;
 }
+
+export default App;

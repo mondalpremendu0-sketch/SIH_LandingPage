@@ -101,7 +101,7 @@ export function NexusFooter() {
             AI-powered social intelligence for understanding sentiment,
             audiences, trends, and influence.
           </p>
-          <a ref={ctaRef} className="nexus-footer-cta-link" href="#platform">
+          <a ref={ctaRef} className="nexus-footer-cta-link" href="/dashboard">
             <span>EXPLORE NEXUS</span>
             <ArrowUpRight aria-hidden="true" size={16} />
           </a>

@@ -135,7 +135,7 @@ export function Navbar({ theme, onThemeChange }) {
         <div className="navbar-actions">
           <motion.a
             className="explore-link"
-            href="#platform"
+            href="/dashboard"
             {...entrance(0.12)}
           >
             Explore platform{" "}
@@ -210,10 +210,10 @@ export function Navbar({ theme, onThemeChange }) {
               ))}
               <motion.a
                 className="mobile-explore"
-                href="#platform"
+                href="/dashboard"
                 onClick={closeMobileMenu}
               >
-                Explore platform <ArrowUpRight aria-hidden="true" size={15} />
+                Explore platfor <ArrowUpRight aria-hidden="true" size={15} />
               </motion.a>
               
             </motion.nav>
