@@ -573,7 +573,7 @@ button {
 .hero-grid {
   position: absolute;
   inset: 0;
-  background-image: 
+  background-image:
     linear-gradient(to right, var(--color-border-subtle) 1px, transparent 1px),
     linear-gradient(to bottom, var(--color-border-subtle) 1px, transparent 1px);
   background-size: 48px 48px;
@@ -3005,4 +3005,13 @@ button {
   font-family: "JetBrains Mono", monospace;
   font-size: 11.5px;
   color: var(--color-text-muted);
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
