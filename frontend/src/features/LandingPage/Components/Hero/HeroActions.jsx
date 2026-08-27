@@ -1,5 +1,6 @@
-import { ArrowUpRight, MoveRight } from "lucide-react";
+import { ArrowUpRight, MoveRight, Sparkles } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
+import { MagneticButton } from "../../../../components/MagneticButton";
 
 export function HeroActions() {
   const reduceMotion = useReducedMotion();
@@ -15,12 +16,18 @@ export function HeroActions() {
         ease: [0.22, 1, 0.36, 1],
       }}
     >
-      <a className="hero-primary-action" href="#intelligence">
-        EXPLORE NEXUS <ArrowUpRight aria-hidden="true" size={16} />
-      </a>
-      <a className="hero-secondary-action" href="#network">
-        HOW IT WORKS <MoveRight aria-hidden="true" size={15} />
-      </a>
+      <MagneticButton as="div" strength={0.2}>
+        <a className="hero-primary-action" href="#intelligence">
+          <span>EXPLORE NEXUS</span>
+          <ArrowUpRight aria-hidden="true" size={16} />
+        </a>
+      </MagneticButton>
+      <MagneticButton as="div" strength={0.15}>
+        <a className="hero-secondary-action" href="#network">
+          <span>HOW IT WORKS</span>
+          <MoveRight aria-hidden="true" size={15} />
+        </a>
+      </MagneticButton>
     </motion.div>
   );
 }

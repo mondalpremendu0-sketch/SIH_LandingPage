@@ -2,6 +2,7 @@ import { HeroActions } from "./Hero/HeroActions";
 import { HeroBackground } from "./Hero/HeroBackground";
 import { HeroCapabilities } from "./Hero/HeroCapabilities";
 import { HeroContent } from "./Hero/HeroContent";
+import { HeroSpatialHUD } from "./Hero/HeroSpatialHUD";
 
 export function HeroSection() {
   return (
@@ -20,7 +21,9 @@ export function HeroSection() {
             <HeroCapabilities />
           </div>
         </div>
-        <div className="hero-visual-space" aria-hidden="true" />
+        <div className="hero-visual-space" aria-hidden="true">
+          <HeroSpatialHUD />
+        </div>
       </div>
     </section>
   );
