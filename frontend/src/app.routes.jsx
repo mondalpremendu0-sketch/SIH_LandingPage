@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router";
 import { LandingPage } from "./features/LandingPage/pages/LandingPage";
-import Dashboard3D from "./features/DashboardPage/pages/Dashboard3D";
+import Dashboard3D1 from "./features/DashboardPage/pages/Dashboard3D1";
 
 export const getInitialTheme = () => {
   const savedTheme = window.localStorage.getItem("nexus-theme");
@@ -19,7 +19,7 @@ export const createAppRouter = (theme, onThemeChange) => {
     },
     {
       path: "/dashboard",
-      element: <Dashboard3D />,
+      element: <Dashboard3D1 />,
     },
   ]);
 };

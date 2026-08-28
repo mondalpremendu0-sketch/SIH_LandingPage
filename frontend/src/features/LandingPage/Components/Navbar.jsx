@@ -100,7 +100,7 @@ export function Navbar({ theme, onThemeChange }) {
           aria-label="Nexus home"
           {...entrance(0)}
         >
-          <span className="brand-name">NEXUS</span>
+          <span className="brand-name">TRINERT</span>
           <span className="brand-label">SOCIAL INTELLIGENCE</span>
         </motion.a>
 
@@ -213,7 +213,7 @@ export function Navbar({ theme, onThemeChange }) {
                 href="/dashboard"
                 onClick={closeMobileMenu}
               >
-                Explore platfor <ArrowUpRight aria-hidden="true" size={15} />
+                Explore platform <ArrowUpRight aria-hidden="true" size={15} />
               </motion.a>
               
             </motion.nav>

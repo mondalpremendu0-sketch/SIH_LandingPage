@@ -16,11 +16,11 @@ export function HeroContent() {
   return (
     <div className="hero-content">
       {/* Top Telemetry Beacon Tag */}
-      <motion.div className="hero-eyebrow-badge" {...reveal(0.12)}>
-        <span className="eyebrow-beacon-dot" />
-        <span className="hero-eyebrow-text">NEXUS &middot; SPATIAL SOCIAL INTELLIGENCE</span>
-        <span className="eyebrow-version-tag">V3.4 CORE</span>
-      </motion.div>
+        {/* <motion.div className="hero-eyebrow-badge" {...reveal(0.12)}>
+          <span className="eyebrow-beacon-dot" />
+          <span className="hero-eyebrow-text">TRINERT &middot; SPATIAL SOCIAL INTELLIGENCE</span>
+          <span className="eyebrow-version-tag">V3.4 CORE</span>
+        </motion.div> */}
 
       {/* Massive Display Headline */}
       <h1 className="hero-title" id="hero-title">
