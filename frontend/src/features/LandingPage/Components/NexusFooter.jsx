@@ -91,7 +91,7 @@ export function NexusFooter() {
         </svg>
 
         <div className="nexus-footer-cta-content">
-          <p className="nexus-footer-kicker">NEXUS / SOCIAL INTELLIGENCE</p>
+          <p className="nexus-footer-kicker">TRINERT / SOCIAL INTELLIGENCE</p>
           <h2 id="footer-title">
             SEE THE SIGNAL
             <br />
@@ -102,7 +102,7 @@ export function NexusFooter() {
             audiences, trends, and influence.
           </p>
           <a ref={ctaRef} className="nexus-footer-cta-link" href="/dashboard">
-            <span>EXPLORE NEXUS</span>
+            <span>EXPLORE TRINERT</span>
             <ArrowUpRight aria-hidden="true" size={16} />
           </a>
         </div>

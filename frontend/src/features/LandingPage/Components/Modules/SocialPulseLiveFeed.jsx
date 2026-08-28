@@ -114,7 +114,7 @@ export function SocialPulseLiveFeed() {
         <div className="section-header-block">
           <div className="flex-header-row">
             <div>
-              <p className="section-eyebrow">NEXUS / LIVE RADAR</p>
+              <p className="section-eyebrow">TRINERT / LIVE RADAR</p>
               <h2 id="pulse-heading" className="section-main-title">
                 REAL-TIME SOCIAL PULSE
                 <br />

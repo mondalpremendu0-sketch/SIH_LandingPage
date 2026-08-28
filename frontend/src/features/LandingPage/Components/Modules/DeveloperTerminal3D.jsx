@@ -74,7 +74,7 @@ export function DeveloperTerminal3D() {
   const getCodeSnippet = () => {
     const q = selectedPreset.query;
     if (lang === "curl") {
-      return `curl -X POST https://api.nexus.intelligence/v1/sentiment/stream \\
+      return `curl -X POST https://api.trinert.intelligence/v1/sentiment/stream \\
   -H "Authorization: Bearer nx_live_8f39b209a1" \\
   -H "Content-Type: application/json" \\
   -d '{
@@ -85,9 +85,9 @@ export function DeveloperTerminal3D() {
   }'`;
     }
     if (lang === "python") {
-      return `from nexus_intelligence import NexusClient
+      return `from trinert_intelligence import TrinertClient
 
-client = NexusClient(api_key="nx_live_8f39b209a1")
+client = TrinertClient(api_key="tn_live_8f39b209a1")
 
 # Stream live sentiment and narrative velocity
 stream = client.sentiment.stream(
@@ -100,12 +100,12 @@ stream = client.sentiment.stream(
 for signal in stream:
     print(f"[{signal.timestamp}] Shift: {signal.stance} | Velocity: +{signal.velocity}%")`;
     }
-    return `import { Nexus } from "@nexus/sdk";
+    return `import { Trinert } from "@trinert/sdk";
 
-const nexus = new Nexus({ apiKey: "nx_live_8f39b209a1" });
+const trinert = new Trinert({ apiKey: "tn_live_8f39b209a1" });
 
 // Subscribe to real-time narrative emergence
-const subscription = nexus.narratives.subscribe({
+const subscription = trinert.narratives.subscribe({
   query: "${q}",
   onShift: (event) => {
     console.log(\`Emergence in \${event.community}: \${event.sentimentScore}%\`);
@@ -137,7 +137,7 @@ const subscription = nexus.narratives.subscribe({
     <section className="developer-section" id="developers" aria-labelledby="dev-heading">
       <div className="container">
         <div className="section-header-block">
-          <p className="section-eyebrow">NEXUS / DEVELOPER API</p>
+          <p className="section-eyebrow">TRINERT / DEVELOPER API</p>
           <h2 id="dev-heading" className="section-main-title">
             BUILD ON THE
             <br />
@@ -232,7 +232,7 @@ const subscription = nexus.narratives.subscribe({
               </button>
 
               <span className="terminal-telemetry-badge">
-                ENDPOINT: api.nexus.intelligence/v1 &middot; TLS 1.3
+                ENDPOINT: api.trinert.intelligence/v1 &middot; TLS 1.3
               </span>
             </div>
 

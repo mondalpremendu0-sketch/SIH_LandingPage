@@ -52,7 +52,7 @@ export function ArchitecturePipeline3D() {
     <section className="architecture-pipeline-section" id="platform-architecture" aria-labelledby="arch-heading">
       <div className="container">
         <div className="section-header-block">
-          <p className="section-eyebrow">NEXUS / SYSTEM ARCHITECTURE</p>
+          <p className="section-eyebrow">TRINERT / SYSTEM ARCHITECTURE</p>
           <h2 id="arch-heading" className="section-main-title">
             HIGH-VELOCITY
             <br />

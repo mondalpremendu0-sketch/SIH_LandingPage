@@ -1,7 +1,7 @@
 export function IntelligenceHeader() {
   return (
     <div className="intelligence-header">
-      <p className="section-eyebrow">NEXUS / INTELLIGENCE</p>
+      <p className="section-eyebrow">TRINERT / INTELLIGENCE</p>
       <h2 className="intelligence-title">
         FROM SOCIAL SIGNALS
         <br />
